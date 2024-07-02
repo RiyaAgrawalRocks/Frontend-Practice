@@ -72,17 +72,21 @@ Custom Styles
 }
 
 .item{
-    width: 75px;
-    height: 20px;
+    flex-basis: 500px;
+    height: 80px;
     padding: 20px;
-    margin: 5px;
     background-color: #15f831;
     text-align: center;
     box-shadow: 1px 2px 5px 0 black;
+    color: black;
     border: 1px solid black;
     border-radius: 8px;
     font-size: 2em;
-    font-family: arial, sans-serif;    
+    font-family: arial, sans-serif;   
+    transition: all 0.1s linear;
+    font-weight: bold;
+    cursor: pointer; 
+    flex: 1 0 200px;
 }
 
 h1{
@@ -94,3 +98,32 @@ h1{
 span{
     font-weight: 400;
 }
+
+.three {
+   align-self: flex-end;
+}
+/*
+ .one{
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+ }
+
+ .two{
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+ }
+
+ .three{
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+ }
+
+ .four{
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+ }
+    */
