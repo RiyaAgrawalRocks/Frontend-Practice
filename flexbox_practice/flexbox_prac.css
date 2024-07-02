@@ -54,13 +54,7 @@ Custom Styles
 ==============================
 */
 
-h1{
-    text-align: center;
-}
 
-div{
-
-}
 /*  CONTAINER   */
 #container{
     width: 1000px;
@@ -70,4 +64,33 @@ div{
     border-radius: 8px;
     display: flex;
     flex-direction: row;
+    flex-wrap:wrap;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    align-items: stretch;
+    align-content: space-evenly;
+}
+
+.item{
+    width: 150px;
+    height: 80px;
+    padding: 20px;
+    margin: 5px;
+    background-color: #15f831;
+    text-align: center;
+    box-shadow: 1px 2px 5px 0 black;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 2em;
+    font-family: arial, sans-serif;    
+}
+
+h1{
+    text-align: center;
+    font-size:xx-large;
+    font-weight: 900;
+}
+
+span{
+    font-weight: 400;
 }
