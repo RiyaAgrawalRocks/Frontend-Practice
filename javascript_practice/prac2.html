@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML="Paragraph Changed.";
+        }
+    </script>
+
+ <!---   <script src="https://www.w3schools.com/js/myScript.js"></script>
+    <script src="/js/myScript.js"></script>
+    <script src="myScript.js"></script>   -->
+</head>
+<body>
+    
+    <h2>Demo JavaScript in Head</h2>
+    <p id="demo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Try It</button>
+
+    <!-- 
+JavaScript can "display" data in different ways:
+
+Writing into an HTML element, using innerHTML.
+Writing into the HTML output using document.write().
+Writing into an alert box, using window.alert().
+Writing into the browser console, using console.log().
+-->
+    <script>
+        document.getElementById("demo").innerHTML=5+6;
+    </script>
+
+    <button type="button" onclick="document.write(7+6)">Try It Now</button>
+
+    <script>
+        window.alert(8+9);
+    </script>
+
+<script>
+    console.log("Console Output test");
+    </script>
+
+<button onclick="window.print()">Print This Page</button>
+
+</body>
+</html>

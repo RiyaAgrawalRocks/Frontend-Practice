@@ -10,7 +10,7 @@ header{
 }
 
 #logo{
- 
+    display: flex;
     flex-basis: 40%;
 }
 
