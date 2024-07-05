@@ -164,4 +164,143 @@ function myFunction() {
   // code here can NOT use carName
 
   
+// Create an Object
+const person = {};
+
+// Add Properties
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+//This example creates an empty JavaScript object, and then adds 4 properties
+
+
+// Create an Object
+const person = new Object();
+
+// Add Properties
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+//This example create a new JavaScript object using new Object(), and then adds 4 properties
+
+
+//You can access object properties in two ways
+person["lastName"];
+person.lastName;
+
+
+const person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+      return this.firstName + " " + this.lastName;
+    }
+  };
+
+  //Create an Object
+const person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:50, eyeColor:"blue"
+  }
+  
+  // Create a copy
+  const x = person;
+  
+  // Change Age in both
+  x.age = 10;
+
+
+  const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+  };
+  
+  delete person.age;
+
+
+  //Nested objects
+  myObj = {
+    name:"John",
+    age:30,
+    myCars: {
+      car1:"Ford",
+      car2:"BMW",
+      car3:"Fiat"
+    }
+  }
+
+  myObj.myCars.car2;
+  myObj.myCars["car2"];
+  myObj["myCars"]["car2"];
+
+  //This example uses the JavaScript toUpperCase() method to convert a text to uppercase
+  person.name = function () {
+    return (this.firstName + " " + this.lastName).toUpperCase();
+  };
+
+  /*
+  Some solutions to display JavaScript objects are:
+
+Displaying the Object Properties by name
+Displaying the Object Properties in a Loop
+Displaying the Object using Object.values()
+Displaying the Object using JSON.stringify()
+*/
+
+// Create an Object
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+  };
+  
+  // Build a Text
+  let text = "";
+  for (let x in person) {
+    text += person[x] + " ";
+  };
+  
+  // Display the Text
+  document.getElementById("demo").innerHTML = text;
+
+  
+
+// Create an Object
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+  };
+  
+  // Create an Array
+  const myArray = Object.values(person);
+  
+  // Display the Array
+  document.getElementById("demo").innerHTML = myArray;
+
+
+
+  // Create an Object
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+  };
+  
+  // Stringify Object
+  let myString = JSON.stringify(person);
+  
+  // Display String
+  document.getElementById("demo").innerHTML = myString;
+  
+
+
+
+
 
