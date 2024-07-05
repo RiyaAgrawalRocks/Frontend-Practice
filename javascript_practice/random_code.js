@@ -298,7 +298,22 @@ const person = {
   
   // Display String
   document.getElementById("demo").innerHTML = myString;
+
   
+  //template strings
+  let text = `He's often called "Johnny"`;
+
+  let text = "We are the so-called \"Vikings\" from the north.";
+  let text= 'It\'s alright.';
+  let text = "The character \\ is called backslash.";
+
+
+//defining strings
+let x = "John";
+let y = new String("John");
+
+
+
 
 
 
