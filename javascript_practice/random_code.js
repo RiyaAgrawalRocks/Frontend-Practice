@@ -131,4 +131,37 @@ car = undefined;    // Value is undefined, type is undefined, variable gets empt
 
 let car = "";    // The value is "", the typeof is "string"
 
+// Function is called, the return value will end up in x
+let x = myFunction(4, 3);
+
+function myFunction(a, b) {
+// Function returns the product of a and b
+  return a * b;
+}
+
+
+function toCelsius(f) {
+    return (5/9) * (f-32);
+  }
+  
+  let value = toCelsius;
+  document.getElementById("demo").innerHTML = value;
+/*
+ Result:
+Accessing a function without () returns the function and not the function result:
+
+function toCelsius(f) { return (5/9) * (f-32); }
+*/
+
+
+// code here can NOT use carName
+
+function myFunction() {
+    let carName = "Volvo";
+    // code here CAN use carName
+  }
+  
+  // code here can NOT use carName
+
+  
 
