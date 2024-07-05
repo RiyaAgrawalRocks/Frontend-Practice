@@ -9,11 +9,11 @@ document.getElementById("demo").style.display="block";
 
 //   JavaScript Statements
 
-let x,y,z;
+/*let x,y,z;
 x = 5;
 y =6 ;
 z = x + y ;
-let person= "Hege";
+let person= "Hege";*/
 
 //Variables
 
@@ -26,9 +26,9 @@ Using let
 Using const
 */
 
-x = 5;
+/*x = 5;
 y = 6;
-z = x + y;
+z = x + y;*/
 
 var x = 5;
 var y = 6;
@@ -85,3 +85,50 @@ cars = ["Toyota", "Volvo", "Audi"];    // ERROR
 const car={type:"Fiat", model:"500", color:"white"};
 car.color="red";
 car.owner="Johnson";
+
+let a = 5;
+let b = Math.pow(a,2);
+
+let c = 16 + 4 + "Volvo";
+//Result: c="20Volvo"
+
+let d = "Volvo" + 16 + 4;
+//result; c="Volvo164"
+
+let m;       // Now m is undefined
+m = 5;       // Now m is a Number
+m = "John";  // Now m is a String
+
+// Single quote inside double quotes:
+let answer1 = "It's alright";
+
+// Single quotes inside double quotes:
+let answer2 = "He is called 'Johnny'";
+
+// Double quotes inside single quotes:
+let answer3 = 'He is called "Johnny"';
+
+let s = 123e5;    // 12300000
+let t = 123e-5;   // 0.00123
+
+let g = BigInt("123456789012345678901234567890");
+
+const cars = ["Saab", "Volvo", "BMW"];
+
+typeof ""             // Returns "string"
+typeof "John"         // Returns "string"
+typeof "John Doe"     // Returns "string"
+
+typeof 0              // Returns "number"
+typeof 314            // Returns "number"
+typeof 3.14           // Returns "number"
+typeof (3)            // Returns "number"
+typeof (3 + 4)        // Returns "number"
+
+let car;    // Value is undefined, type is undefined
+
+car = undefined;    // Value is undefined, type is undefined, variable gets emptied
+
+let car = "";    // The value is "", the typeof is "string"
+
+
