@@ -674,4 +674,237 @@ cars.sort(function(a, b){
 
 
 
+/*
+=============================
+Array Iteration
+=============================
+*/
+
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+numbers.forEach(myFunction);
+
+function myFunction(value, index, array) {
+  txt += value + "<br>";
+}
+
+
+
+
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+numbers.forEach(myFunction);
+
+function myFunction(value) {
+  txt += value + "<br>";
+}
+
+
+
+
+
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+/*
+The map() method creates a new array by performing a function on each array element.
+
+The map() method does not execute the function for array elements without values.
+
+The map() method does not change the original array.
+
+This example multiplies each array value by 2
+*/
+
+
+
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+function myFunction(value) {
+  return value * 2;
+}
+
+
+
+
+
+const myArr = [1, 2, 3, 4, 5, 6];
+const newArr = myArr.flatMap((x) => x * 2);
+/*
+The flatMap() method first maps all elements of an array and then creates a new array by flattening the array.
+*/
+
+
+
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+/*
+The filter() method creates a new array with array elements that pass a test.
+
+This example creates a new array from elements with a value larger than 18
+*/
+
+
+
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+/*
+Note that the function takes 4 arguments:
+
+The total (the initial value / previously returned value)
+The item value
+The item index
+The array itself
+
+
+The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+The reduce() method works from left-to-right in the array.
+*/
+
+
+
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+function myFunction(total, value) {
+  return total + value;
+}
+
+
+
+
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction, 100);
+
+function myFunction(total, value) {
+  return total + value;
+}
+/*
+The reduce() method can accept an initial value
+*/
+
+
+
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduceRight(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+/*
+The reduceRight() method runs a function on each array element to produce (reduce it to) a single value.
+
+The reduceRight() works from right-to-left in the array.
+*/
+
+
+
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduceRight(myFunction);
+
+function myFunction(total, value) {
+  return total + value;
+}
+
+
+
+
+const numbers = [45, 4, 9, 16, 25];
+let allOver18 = numbers.every(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+/*
+he every() method checks if all array values pass a test.
+
+This example checks if all array values are larger than 18
+*/
+
+
+
+
+const numbers = [45, 4, 9, 16, 25];
+let someOver18 = numbers.some(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+/*
+The some() method checks if some array values pass a test.
+
+This example checks if some array values are larger than 18
+*/
+
+
+
+
+Array.from("ABCDEFG");
+/*
+The Array.from() method returns an Array object from any object with a length property or any iterable object.
+*/
+
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruits.keys();
+
+for (let x of keys) {
+  text += x + "<br>";
+}
+/*
+The Array.keys() method returns an Array Iterator object with the keys of an array.
+*/
+
+
+
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruits.entries();
+
+for (let x of f) {
+  document.getElementById("demo").innerHTML += x;
+}
+/*
+Create an Array Iterator, and then iterate over the key/value pairs.
+The entries() method returns an Array Iterator object with key/value pairs:
+
+[0, "Banana"]
+[1, "Orange"]
+[2, "Apple"]
+[3, "Mango"]
+
+The entries() method does not change the original array.
+*/
+
+
+
+const months = ["Januar", "Februar", "Mar", "April"];
+const myMonths = months.with(2, "March");
+//with() method as a safe way to update elements in an array without altering the original array.
+
+
+
+const q1 = ["Jan", "Feb", "Mar"];
+const q2 = ["Apr", "May", "Jun"];
+const q3 = ["Jul", "Aug", "Sep"];
+const q4 = ["Oct", "Nov", "May"];
+
+const year = [...q1, ...q2, ...q3, ...q4];
+//Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,May
+
+
+
 
