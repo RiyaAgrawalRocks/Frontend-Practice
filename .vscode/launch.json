@@ -28,7 +28,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\javascript_practice\\promises4.js",
+            "program": "${workspaceFolder}\\javascript_practice\\promises8.js",
             "console": "integratedTerminal",
             "outputCapture": "std"
         }
