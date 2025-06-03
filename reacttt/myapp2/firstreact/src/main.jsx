@@ -4,7 +4,8 @@ import './index.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById("root")).render(
-  <h1>
-    Hiiiii there!
-  </h1>
+<>
+  <img src="src/assets/react.svg"/>
+  <h1>Another element</h1>
+</>
 )
