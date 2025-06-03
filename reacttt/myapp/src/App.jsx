@@ -1,9 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-  <h1>Hiiiii</h1>
+  <>
+  <h1>Why I want to learn React</h1>
+  <ul>
+    <li>Mazaa aata h</li>
+    <li>Frontend seekhna h</li>
+    <li>Full Stack complete hojaega</li>
+  </ul>
+  </>
   );
 }
 
