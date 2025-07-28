@@ -1,0 +1,36 @@
+Stuff Toys
+
+Stuffed toys are distinguishable from other toys mainly by their softness, flexibility, and resemblance to animals or fictional characters. Stuffed toys most commonly take the form of animals, especially bears (in the case of teddy bears), mammalian pets such as cats and dogs, and highly recognizable animals such as zebras, tigers, pandas, lizards, and elephants. Many fictional animal-like characters from movies, TV shows, books, or other entertainment forms often appear in stuffed toy versions, as do both real and fictional humans if the individual or character is famous enough. These toys are filled with soft plush material.[1]
+
+Stuffed toys come in an array of different sizes, with the smallest being thumb-sized and the largest being larger than a house.[2][3] However, the largest somewhat commonly produced stuffed toys are not much bigger than a person.[4] Most stuffed toys are designed to be an appropriate size for easy cuddling. They also come in a wide variety of colors, cloth surfaces, fur textures, and humanizing embellishments.[citation needed]
+
+Stuffed toys are commonly sold in stores worldwide. Vendors are often abundant at tourist attractions, airports, carnivals, fairs, downtown parks, and general public meeting places of almost any nature, especially if there are children present.
+ 
+------------ COLOR
+Current color values:
+RGB	rgb(249 210 248)
+HEX	#f9d2f8
+HSL	hsl(302 76.5% 90%)
+HWB	hwb(302 82.3% 2.4%)
+color()	color(srgb 0.98 0.82 0.97)
+
+Current color values:
+RGB	rgb(245 0 118)
+HEX	#f50076
+HSL	hsl(331 100% 48%)
+HWB	hwb(331 0.0% 4.0%)
+color()	color(srgb 0.96 0 0.46)
+
+------------ FONT
+Embed code in the <head> of your html
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+Bebas Neue: CSS class
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
