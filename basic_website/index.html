@@ -1,34 +1,135 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Stuff Toys</title>
-    </head>
-    <body>
-        <h1>Stuff Toys</h1>
-        <img src="images/stuff toys2.jpeg" alt="Stuff Toys"/>
-        <p>
-            Stuffed toys are distinguishable from other toys mainly by their softness, flexibility, and resemblance to animals or fictional characters. Stuffed toys most commonly take the form of animals, especially bears (in the case of teddy bears), mammalian pets such as cats and dogs, and highly recognizable animals such as zebras, tigers, pandas, lizards, and elephants. Many fictional animal-like characters from movies, TV shows, books, or other entertainment forms often appear in stuffed toy versions, as do both real and fictional humans if the individual or character is famous enough. These toys are filled with soft plush material.[1]
 
-Stuffed toys come in an array of different sizes, with the smallest being thumb-sized and the largest being larger than a house.[2][3] However, the largest somewhat commonly produced stuffed toys are not much bigger than a person.[4] Most stuffed toys are designed to be an appropriate size for easy cuddling. They also come in a wide variety of colors, cloth surfaces, fur textures, and humanizing embellishments.[citation needed]
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Stuff Toys</title>
+    <style>
+      body{
+        text-align: center;
+      }
+      form{
+        display: inline-block;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+      }
+      p + p {
+        margin-top: 1em;
+      }
+      label{
+        display: inline-block;
+        min-width: 90px;
+        text-align: right;
+      }
+      input, textarea{
+        font: 1em sans-serif;
+        width: 300px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+      }
+      input:focus, textarea:focus{
+        outline-style: solid;
+        outline-color: #000;
+      }
+      textarea{
+        vertical-align: top;
+        height: 5em;
+      }
+      .button{
+        padding-left: 90px;
+      }
+      button{
+        margin-left: 0.5em;
+      }
+    </style>
+  </head>
 
-Stuffed toys are commonly sold in stores worldwide. Vendors are often abundant at tourist attractions, airports, carnivals, fairs, downtown parks, and general public meeting places of almost any nature, especially if there are children present.
-        </p>
+  <body>
+    <h1>Stuff Toys</h1>
+    <img src="images/stuff toys2.jpeg" alt="Stuff Toys" />
+    <p>
+      Stuffed toys are distinguishable from other toys mainly by their softness,
+      flexibility, and resemblance to animals or fictional characters. Stuffed
+      toys most commonly take the form of animals, especially bears (in the case
+      of teddy bears), mammalian pets such as cats and dogs, and highly
+      recognizable animals such as zebras, tigers, pandas, lizards, and
+      elephants. Many fictional animal-like characters from movies, TV shows,
+      books, or other entertainment forms often appear in stuffed toy versions,
+      as do both real and fictional humans if the individual or character is
+      famous enough. These toys are filled with soft plush material.[1] Stuffed
+      toys come in an array of different sizes, with the smallest being
+      thumb-sized and the largest being larger than a house.[2][3] However, the
+      largest somewhat commonly produced stuffed toys are not much bigger than a
+      person.[4] Most stuffed toys are designed to be an appropriate size for
+      easy cuddling. They also come in a wide variety of colors, cloth surfaces,
+      fur textures, and humanizing embellishments.[citation needed] Stuffed toys
+      are commonly sold in stores worldwide. Vendors are often abundant at
+      tourist attractions, airports, carnivals, fairs, downtown parks, and
+      general public meeting places of almost any nature, especially if there
+      are children present.
+    </p>
     <p>At Mozilla, we're a global community of</p>
 
-<ul>
-  <li>technologists</li>
-  <li>thinkers</li>
-  <li>builders</li>
-</ul>
+    <ul>
+      <li>technologists</li>
+      <li>thinkers</li>
+      <li>builders</li>
+    </ul>
 
-<p>working together…</p>
+    <p>working together…</p>
 
-<a href="https://www.mozilla.org/en-US/about/manifesto/">
-  Mozilla Manifesto
-</a>
-
+    <a href="https://www.mozilla.org/en-US/about/manifesto/">
+      Mozilla Manifesto
+    </a>
     
-    </body>
+    <form action="test" method="post">
+      <div>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="user_name" placeholder="Enter your name"/>
+      </div>
+      <div>
+        <label for="email">Email ID: </label>
+        <input type="email" id="email" name="user_email"/>
+      </div>
+      <div>
+        <label for="msg">Message: </label>
+        <textarea id="msg" name="user_message"></textarea>
+      </div>
+      <div class="button">
+        <button type="submit">Send your message</button>
+      </div>
+    </form>
+
+    <form>
+  <fieldset>
+    <legend>Fruit juice size</legend>
+    <p>
+      <input type="radio" name="size" id="size_1" value="small" />
+      <label for="size_1">Small</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_2" value="medium" />
+      <label for="size_2">Medium</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_3" value="large" />
+      <label for="size_3">Large</label>
+    </p>
+  </fieldset>
+
+  <form>
+  <p>
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
+    <label for="taste_1">I like cherry</label>
+  </p>
+  <p>
+    <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
+    <label for="taste_2">I like banana</label>
+  </p>
+</form>
+
+</form>
+  </body>
 </html>
