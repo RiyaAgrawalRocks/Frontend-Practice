@@ -38,7 +38,8 @@
         color: #202020;
         /* background-color: #d45b04; */
         padding: 5px 15px;
-      }
+        position: relative;
+      } 
       .nav1 button {
         background-color: #254bf6;
         color: white;
@@ -48,7 +49,7 @@
         cursor: pointer;
       }
       .nav1 a::after {
-        content: "";
+        content: "abc";
         background-color: #0a65c7;
         transform: scaleX(0);
         transition: transform 0.3s ease-in-out;
@@ -60,6 +61,47 @@
       }
       .nav1 a:hover::after {
         transform: scaleX(1);
+      }
+
+      .nav2{
+        background-color: #03643c;        
+        width: 200px;
+        padding: 20px;
+      }
+      .nav2 ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav2 li{
+        margin-bottom: 12px;
+      }
+      .nav2 a{
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 10px;
+        width: 100%;
+        /* background-color: #fff; */
+      }
+      .nav2 a:hover{
+        background-color: #05c712;
+        width: 90%;
+        border-radius: 5px;
+        /* text-align: center; */
+      }
+      .nav2 .login-btn{
+        background-color: #032c16;
+        color:white;
+        border: none;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .nav2 .login-btn:hover{
+        background-color: #05c712;
+        border: 1px solid white;
       }
     </style>
   </head>
