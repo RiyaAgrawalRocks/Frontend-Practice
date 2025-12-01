@@ -1,0 +1,189 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.container{
+    background-color: #010529;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    /* border: 1px solid red; */
+    width: 400px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-wrapper{
+    position:absolute;
+    z-index: 0;
+    inset: 0;
+}
+.bg-shape-bg{
+    height: 100%;
+    position: absolute;
+    width: 130px;
+    background: linear-gradient(135deg, #ff0000, #ffb700);
+    border-radius: 8px;
+    transform: skewX(15deg);
+    margin-left: 180px;
+    filter: blur(70px);
+    opacity: 85%;
+}
+.bg-shape{
+    height: 100%;
+    position: absolute;
+    width: 175px;
+    background: linear-gradient(135deg, #ff0000, #ffd500);
+    border-radius: 8px;
+    transform: skewX(15deg);
+    justify-self: center;
+}
+.front-card{
+    box-sizing: border-box;
+    /* background: rgba(4, 21, 56, 0.45); */
+    background:rgba(105, 105, 105, 0.164);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    /* border: 1px solid rgba(255, 255, 255, 0.12); */
+    border-radius: 15px;
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+h1{
+    opacity: 100%;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: center;
+    margin: 10px;
+    padding: 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+img{
+    height: 200px;
+    width: 250px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 2px solid rgba(255,255,255,0.35);
+}
+p{
+    margin: 0 5px 5px 5px;
+    padding: 0 5px 5px 5px;
+    line-height: 1.5em;
+    /* border: 1px solid red; */
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-around;
+    width: 80%;
+}
+button{
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.45em;
+    font-weight: 600;
+    width: 100px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    /* font-size: medium; */
+    color: black;
+}
+button:hover{
+    transform: scale(1.1, 1.1);
+    background-color: rgb(255, 204, 0);
+    box-shadow: 3px 3px 10px rgba(0, 0, 59, 0.30),
+    -3px -3px 10px rgba(0, 0, 59, 0.20);
+}
+.floating-square-one{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 8px;
+    background:rgba(105, 105, 105, 0.164);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    backdrop-filter: blur(20px);
+    top: -40px;
+    left: 80px;
+    animation-name: floatSquare;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    /* transform: scale(0); */
+    display: none;
+}
+
+.floating-square-two{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 8px;
+    background:rgba(105, 105, 105, 0.164);
+    box-shadow: 0 -8px 30px rgba(0,0,0,0.35);
+    backdrop-filter: blur(20px);
+    bottom: -35px;
+    right: 80px;
+    animation-name: floatSquare2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    display: none;
+}
+
+@keyframes floatSquare {
+    0% {
+        transform: translate(0) scale(1);
+    }
+    100% {
+        transform: translate(15px, 5px) scale(1);
+    }
+}
+@keyframes floatSquare2 {
+    0% {
+        transform: translate(0) scale(1);
+    }
+    100% {
+        transform: translate(-15px, -5px) scale(1);
+    }
+}
+
+.content:hover .front-card{
+    transform: scale(1.1, 1.1);
+}
+
+.content:hover .floating-square-one{
+    display: block;
+}
+
+.content:hover .floating-square-two{
+    display: block;   
+}
+
+.content:hover .bg-shape, .bg-shape-bg{
+    transform: scaleX(1.8);
+    transition: transform 0.5s ease-in-out;
+}
