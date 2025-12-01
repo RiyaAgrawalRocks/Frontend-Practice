@@ -132,10 +132,12 @@ button:hover{
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
     /* transform: scale(0); */
-    display: none;
+    /* display: none; */
+    opacity: 0;
 }
 
 .floating-square-two{
+    opacity: 0;
     position: absolute;
     width: 100px;
     height: 100px;
@@ -146,12 +148,11 @@ button:hover{
     backdrop-filter: blur(20px);
     bottom: -35px;
     right: 80px;
-    animation-name: floatSquare2;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-    display: none;
+    transform: scale(5);
+    /* animation: 
+    shrinkSquare 2s ease-out forwards paused,
+    floatSquare2 2s ease-in-out infinite alternate 2s paused; */
+    /* display: none; */
 }
 
 @keyframes floatSquare {
@@ -171,19 +172,30 @@ button:hover{
     }
 }
 
+@keyframes shrinkSquare{
+    0%{
+        transform: scale(5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 .content:hover .front-card{
     transform: scale(1.1, 1.1);
 }
 
 .content:hover .floating-square-one{
-    display: block;
+    opacity: 1;
 }
 
 .content:hover .floating-square-two{
-    display: block;   
+    opacity: 1;
+    animation: shrinkSquare 0.3s ease-out forwards, floatSquare2 2s ease-in-out infinite alternate 0.3s;
 }
 
-.content:hover .bg-shape, .bg-shape-bg{
+.content:hover .bg-shape, 
+.content:hover .bg-shape-bg{
     transform: scaleX(1.8);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
