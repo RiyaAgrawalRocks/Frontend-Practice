@@ -148,7 +148,7 @@ button:hover{
     backdrop-filter: blur(20px);
     bottom: -35px;
     right: 80px;
-    transform: scale(5);
+    /* transform: scale(5); */
     /* animation: 
     shrinkSquare 2s ease-out forwards paused,
     floatSquare2 2s ease-in-out infinite alternate 2s paused; */
@@ -172,14 +172,14 @@ button:hover{
     }
 }
 
-@keyframes shrinkSquare{
+/* @keyframes shrinkSquare{
     0%{
         transform: scale(5);
     }
     100%{
         transform: scale(1);
     }
-}
+} */
 
 .content:hover .front-card{
     transform: scale(1.1, 1.1);
@@ -191,7 +191,8 @@ button:hover{
 
 .content:hover .floating-square-two{
     opacity: 1;
-    animation: shrinkSquare 0.3s ease-out forwards, floatSquare2 2s ease-in-out infinite alternate 0.3s;
+    /* animation: shrinkSquare 0.3s ease-out forwards, floatSquare2 2s ease-in-out infinite alternate 0.3s; */
+    animation: floatSquare2 2s ease-in-out infinite alternate 0.3s;
 }
 
 .content:hover .bg-shape, 
