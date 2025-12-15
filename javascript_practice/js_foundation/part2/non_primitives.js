@@ -23,5 +23,14 @@ const myFirstName = "riya";
 // console.log(today.getDate());
 
 //Array
-let heroes = ["a", "b", "c", true]
-let anotherUser = ['hitesh', 'choudhary']
+let heroes = ["a", "b", "c", true];
+let anotherUser = ["hitesh", true];
+// console.log(anotherUser[0]);
+console.log(1 + "1");
+console.log("1" + 1);
+let isValue = true
+console.log(isValue + 1);
+
+console.log(Number(isValue));
+let value = "2abc"
+console.log(typeof Number(value));
