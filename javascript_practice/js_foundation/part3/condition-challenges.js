@@ -44,5 +44,4 @@ if (items.length === 0) {
 }
 else {
     console.log('array is NOT empty');
-    
 }
