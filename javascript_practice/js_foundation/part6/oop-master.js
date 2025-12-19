@@ -14,8 +14,8 @@ function Person(name, age) {
 }
 
 let john = new Person("John", 20);
-console.log(john);
-console.log(john.name);
+// console.log(john);
+// console.log(john.name);
 
 function Animal(type) {
     this.type = type
@@ -30,10 +30,10 @@ Array.prototype.riya = function () {
 }
 
 let myArray = [1, 2, 3]
-console.log(myArray.riya());
+// console.log(myArray.riya());
 
 let myNewArray = [1, 2, 3, 4, 5, 6]
-console.log(myNewArray.riya());
+// console.log(myNewArray.riya());
 
 
 class Vehicle {
@@ -58,5 +58,96 @@ let myCar = new Car('Toyota', 'Corolla')
 // console.log(myCar.drive());
 
 let vehOne = new Vehicle('Toyota', 'Corolla')
-console.log(vehOne.make);
+// console.log(vehOne.make);
 
+// Encapsulation
+class BankAccount {
+  #balance = 0
+
+  deposit(amount) {
+    this.#balance += amount
+    return this.#balance
+  }
+
+  getBalance() {
+    return `$ ${this.#balance}`
+  }
+}
+let account = new BankAccount()
+// console.log(account.getBalance())
+
+// Abstraction
+class CoffeeMachine{
+  start() {
+    //call db
+    //filter value
+    return `Starting the machine`
+  }
+  brewCoffee() {
+    //complex calculation
+    return `Brewing coffee`
+  }
+  pressStartButton(){
+    let msg1 = this.start()
+    let msg2 = this.brewCoffee()
+    return `${msg1} + ${msg2}`
+  }
+}
+let myMachine = new CoffeeMachine()
+  // console.log(myMachine.start());
+  // console.log(myMachine.brewCoffee());
+  // console.log(myMachine.pressStartButton());
+  
+// Polymorphism
+class Bird{
+  fly() {
+    return `I'm flying...`
+  }
+}
+class Penguin extends Bird{
+  fly() {
+    return `Penguins can't fly`
+  }
+}
+let bird = new Bird()
+let penguin = new Penguin()
+// console.log(bird.fly());
+// console.log(penguin.fly());
+
+// static method
+class Calculator{
+  static add(a, b) {
+    return a + b
+  }
+}
+// let calci = new Calculator()
+// console.log(calci.add(2, 3));
+// console.log(Calculator.add(2, 3));
+
+
+// Getters and Setters
+class Employee{
+  #salary 
+
+  constructor(name, salary) {
+    if (salary < 0)
+      throw new Error (`Salary cannot be negative`)
+    this.name = name
+    this.#salary = salary
+  }
+
+  get salary() {
+    return `You are not allowed to see salary`
+  }
+
+  set salary(value) {
+    if (value < 0)
+      console.console.error('Invalid salary');
+    else
+      this._salary = value      
+  }
+}
+let emp = new Employee('Alice', -50000)
+console.log(emp._salary);
+// console.log(emp.salary);
+emp._salary = -90000
