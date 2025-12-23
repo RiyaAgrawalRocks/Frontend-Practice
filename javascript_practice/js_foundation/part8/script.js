@@ -58,6 +58,8 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
     let feedback = document.getElementById("feedbackInput").value;
+    // let lab = document.getElementsByTagName('label').value
+    // console.log(lab);
     console.log(feedback);
     document.getElementById(
       "feedbackDisplay"
@@ -70,6 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // example 10
-document.getElementById('toggleHighlight').addEventListener('click', function () {
-  document.getElementById('descriptionText').style.color = 'yellow'
-})
+document
+  .getElementById("toggleHighlight")
+  .addEventListener("click", function () {
+    document.getElementById("descriptionText").classList.toggle("highlight");
+  });
