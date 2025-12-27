@@ -21,8 +21,17 @@ function rateLimiter(fn, limit) {
 }
 
 function memoize(fn) {
-  // if(ca)
+  let cache = new Map()
+  return function (...args) {
+    const key = JSON.stringify(args)
+    if (cache.has(key))
+      return cache[key]
+    const res = fn(...args)
+    cache[key] = res
+    return res
+  }
 }
+
 // let c1 = createCounter()
 // let c2 = createCounter()
 // console.log(c1());
