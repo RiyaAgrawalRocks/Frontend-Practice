@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 11, 54);
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  color: cyan;
+  font-size: 50px;
+}
+.container {
+  width: 600px;
+  padding: 20px;
+  /* border: solid 1px red; */
+  display: flex;
+  margin: auto;
+  margin-top: 50px;
+  flex-direction: column;
+  background-color: #029cca;
+  border-radius: 10px;
+}
+.add-task-area{
+    /* margin: auto 10px auto 10px; */
+    display: flex;
+    /* border: solid 1px red; */
+    width: 450px;
+    align-self: center;
+    justify-content: space-between;
+    /* margin: 10px; */
+    /* padding: 10px; */
+}
+.task-input{
+  width: 350px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+}
+.add-task-btn{
+  width: 90px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #001e7e;
+  color: white;
+  padding: 7px;
+  font-size: small;
+  font-family: 'Courier New', Courier, monospace;
+}
+.add-task-btn:hover{
+  cursor: pointer;
+  background-color: #0160cd;
+  border: solid 3px #002652;
+}
+.task-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  /* border: solid 1px red; */
+  background-color: rgb(109, 199, 238);
+  border-radius: 10px;
+  list-style: none;
+  width: 450px;
+  align-self: center;
+  margin-top: 20px;
+  padding: 15px;
+}
+.task{
+  background-color: #001e7e;
+  width: 400px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px;
+  /* position: fixed; */
+  padding-left: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.task-text{
+  justify-self: start;
+}
+.buttons{
+  display: flex;
+  width: 140px;
+  justify-content: space-between;
+}
+.done-btn{
+  border: none;
+  background-color: rgb(24, 142, 0);
+  box-sizing: border-box;
+  width: 60px;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.delete{
+  border: none;
+  background-color: rgb(142, 0, 0);
+  box-sizing: border-box;
+  width: 70px;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.done{
+  text-decoration: line-through;
+  font-style: italic;
+}
