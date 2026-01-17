@@ -16,7 +16,7 @@ h1 {
   color: cyan;
   font-size: 50px;
 }
-.container {
+#container {
   width: 600px;
   padding: 20px;
   /* border: solid 1px red; */
@@ -27,7 +27,7 @@ h1 {
   background-color: #029cca;
   border-radius: 10px;
 }
-.add-task-area{
+#add-task-area{
     /* margin: auto 10px auto 10px; */
     display: flex;
     /* border: solid 1px red; */
@@ -37,7 +37,7 @@ h1 {
     /* margin: 10px; */
     /* padding: 10px; */
 }
-.task-input{
+#task-input{
   width: 350px;
   height: 40px;
   border: none;
@@ -47,7 +47,7 @@ h1 {
   font-size: medium;
   font-family: 'Courier New', Courier, monospace;
 }
-.add-task-btn{
+#add-task-btn{
   width: 90px;
   height: 40px;
   border: none;
@@ -58,12 +58,12 @@ h1 {
   font-size: small;
   font-family: 'Courier New', Courier, monospace;
 }
-.add-task-btn:hover{
+#add-task-btn:hover{
   cursor: pointer;
   background-color: #0160cd;
   border: solid 3px #002652;
 }
-.task-list{
+#task-list{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +81,7 @@ h1 {
 .task{
   background-color: #001e7e;
   width: 400px;
-  height: 40px;
+  /* height: 40px; */
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -94,6 +94,8 @@ h1 {
 }
 .task-text{
   justify-self: start;
+  max-width: 230px;
+  justify-content: center;
 }
 .buttons{
   display: flex;
@@ -127,4 +129,8 @@ h1 {
 .done{
   text-decoration: line-through;
   font-style: italic;
+}
+
+.done-pressed{
+  background-color: rgb(140, 202, 127);
 }
