@@ -81,3 +81,17 @@ h2 {
 .hidden {
   display: none;
 }
+
+.cart-item{
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove-item{
+  border: none;
+  padding: 5px;
+  background-color: crimson;
+  color: white;
+  border-radius: 5px;
+}

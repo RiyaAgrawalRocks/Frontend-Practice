@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const cart = [];
+  let totalPrice = 0;
+
   const productList = document.getElementById("product-list");
   const cartItems = document.getElementById("cart-items");
   const emptyCartMessage = document.getElementById("empty-cart");
@@ -40,17 +42,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderCart() {
     cartItems.innerHTML = "";
-    let totalPrice = 0;
 
     if (cart.length > 0) {
       emptyCartMessage.classList.add("hidden");
       cartTotalMessage.classList.remove("hidden");
       cart.forEach((item, index) => {
         totalPrice += item.price;
+
         const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
         cartItem.innerHTML = `
-        ${item.name} - $${item.price.toFixed(2)}
+        <span>${item.name} - $${item.price.toFixed(2)}</span>
+        <button class="remove-item">Remove</button>
         `;
+        // cartItem.setAttribute('data-id', `${item.id}`)
+
+        cartItem.addEventListener("click", (e) => removeItem(e.target, item));
+
         cartItems.appendChild(cartItem);
         totalPriceDisplay.textContent = `$${totalPrice.toFixed(2)}`;
       });
@@ -61,8 +69,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   checkOutBtn.addEventListener("click", () => {
-    cart.length = 0
-    alert('Checkout successfully done')
-    renderCart()
+    cart.length = 0;
+    alert("Checkout successfully done");
+    renderCart();
   });
+
+  function removeItem(target, item) {
+    if (target.tagName !== "BUTTON") return;
+    totalPrice -= item.price.toFixed(2);
+    totalPriceDisplay.innerHTML = `
+    $${totalPrice.toFixed(2)}
+    `
+    // let id = parseInt(target.getAttribute('data-id'))
+    // hide the cart item now and remove it from cart
+  }
 });
