@@ -13,11 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
       question: "What is the capital of France?",
       choices: ["Paris", "London", "Berlin", "Madrid"],
       answer: "Paris",
+      marks: 1,
     },
     {
       question: "Which planet is known as the Red Planet?",
       choices: ["Mars", "Venus", "Jupiter", "Saturn"],
       answer: "Mars",
+      marks: 2,
     },
     {
       question: "Who wrote 'Hamlet'?",
@@ -28,14 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
         "Mark Twain",
       ],
       answer: "William Shakespeare",
+      marks: 3,
     },
   ];
 
   let currentQuestionIndex = 0;
   let score = 0;
+  let totalMarks = 0;
 
   startBtn.addEventListener("click", startQuiz);
   nextBtn.addEventListener("click", () => {
+    totalMarks += questions[currentQuestionIndex].marks;
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
       showQuestion();
@@ -46,13 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
   restartBtn.addEventListener("click", () => {
     currentQuestionIndex = 0;
     score = 0;
+    totalMarks = 0;
     resultContainer.classList.add("hidden");
     startQuiz();
   });
 
   function startQuiz() {
     startBtn.classList.add("hidden");
-    resultContainer.classList.add("hiddem");
+    resultContainer.classList.add("hidden");
     questionContainer.classList.remove("hidden");
     showQuestion();
   }
@@ -62,16 +68,21 @@ document.addEventListener("DOMContentLoaded", () => {
     questionText.textContent = questions[currentQuestionIndex].question;
     choicesList.innerHTML = ""; // clear the previous choices
     questions[currentQuestionIndex].choices.forEach((choice) => {
-      const li = document.createElement(li);
+      const li = document.createElement("li");
       li.textContent = choice;
-      li.addEventListener("click", () => selectAnswer(choice));
+      li.addEventListener("click", (e) => selectAnswer(e.target, choice));
       choicesList.appendChild(li);
     });
   }
 
-  function selectAnswer(choice) {
+  function selectAnswer(choiceElement, choice) {
     const correctAnswer = questions[currentQuestionIndex].answer;
-    if (choice === correctAnswer) score++;
+    if (choice === correctAnswer) {
+      choiceElement.classList.add("correct");
+      score += questions[currentQuestionIndex].marks;
+    } else {
+      choiceElement.classList.add("wrong");
+    }
     nextBtn.classList.remove("hidden");
   }
 
