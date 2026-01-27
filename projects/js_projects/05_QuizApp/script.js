@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showResult();
     }
   });
+
   restartBtn.addEventListener("click", () => {
     currentQuestionIndex = 0;
     score = 0;
@@ -70,19 +71,30 @@ document.addEventListener("DOMContentLoaded", () => {
     questions[currentQuestionIndex].choices.forEach((choice) => {
       const li = document.createElement("li");
       li.textContent = choice;
-      li.addEventListener("click", (e) => selectAnswer(e.target, choice));
+      li.addEventListener("click", (e) => selectAnswer(choice));
       choicesList.appendChild(li);
     });
   }
 
-  function selectAnswer(choiceElement, choice) {
+  function selectAnswer(choice) {
     const correctAnswer = questions[currentQuestionIndex].answer;
-    if (choice === correctAnswer) {
-      choiceElement.classList.add("correct");
-      score += questions[currentQuestionIndex].marks;
-    } else {
-      choiceElement.classList.add("wrong");
-    }
+
+    choicesList.innerHTML = ""; // clear the previous choices
+    questions[currentQuestionIndex].choices.forEach((c) => {
+      const li = document.createElement("li");
+      li.textContent = c;
+
+      if (c === choice) {
+        if (c === correctAnswer) {
+          li.classList.add("correct");
+          score += questions[currentQuestionIndex].marks;
+        } else {
+          li.classList.add("wrong");
+        }
+      }
+      choicesList.appendChild(li);
+    });
+
     nextBtn.classList.remove("hidden");
   }
 
