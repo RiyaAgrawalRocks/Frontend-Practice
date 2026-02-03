@@ -6,7 +6,7 @@ const port = 3000;
 
 const server = http.createServer((req, res) => {
   // console.log(req.url);
-  
+
   const filePath = path.join(
     __dirname,
     req.url === "/" ? "index.html" : req.url,
@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
     ".html": "text/html",
     ".css": "text/css",
     ".js": "text/javascript",
-    ".png": "text/png",
+    ".png": "image/png",
   };
 
   const contentType = mimeTypes[extName] || "application/octet-stream";
@@ -28,13 +28,21 @@ const server = http.createServer((req, res) => {
   fs.readFile(filePath, (err, content) => {
     if (err) {
       if (err.code === "ENOENT") {
-        res.writeHead(404, { "content-type": contentType });
+        console.log(err);
+
+        res.writeHead(404, { "content-type": "text/html" });
         res.end("404: File Not Found Brooooooo");
+        // console.log("-----if block finished");
+
+        // return;
       }
     } else {
       res.writeHead(200, { "content-type": contentType });
       res.end(content, "utf-8");
+      // console.log("-----else block finished");
+      // return;
     }
+    // console.log("-----end of request handling block reached");
   });
 });
 
